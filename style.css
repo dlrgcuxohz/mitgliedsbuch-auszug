@@ -93,6 +93,14 @@ div.row.signature-row {
   padding-right: 2cm;
 }
 
+div.row label.fixed-115 {
+  width: 115px;
+}
+
+div.row label.fixed-60 {
+  width: 60px;
+}
+
 div.row select,
 div.row input {
   flex-grow: 1;
