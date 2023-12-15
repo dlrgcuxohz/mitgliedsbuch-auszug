@@ -1,0 +1,271 @@
+.container {
+  width: 21cm;
+  height: 29.7cm;
+  display: flex;
+  flex-direction: column;
+}
+
+.button-row {
+  width: 21cm;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+body {
+  font-family: "DLRG Univers 55 Roman", "Univers", "Arial", sans-serif;
+  font-size: 10pt;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+h1 {
+  border-top: 3px solid #e30613;
+  color: #e30613;
+  font-size: 18pt;
+}
+
+h2 {
+  font-size: 12pt;
+}
+
+button {
+  min-width: 100px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+button:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+button:focus {
+  background-color: #0062cc;
+  border-color: #005cbf;
+}
+
+div.logo {
+  display: flex;
+  justify-content: end;
+  padding-top: 2mm;
+  border-top: 3px solid #e30613;
+
+  img {
+    width: 2cm;
+  }
+}
+
+div.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: bottom;
+  border-bottom: 1px solid black;
+  height: 1cm;
+  gap: 5mm;
+}
+
+div.row.short-row {
+  width: 10cm;
+}
+
+div.row.signature-row {
+  border-top: 1px solid black;
+  border-bottom: none;
+  justify-content: space-between;
+  padding-right: 2cm;
+}
+
+div.row select,
+div.row input {
+  flex-grow: 1;
+  border: 0;
+}
+
+div.row input.ort {
+  flex-grow: 750;
+}
+
+div.distance {
+  flex-grow: 1;
+}
+
+img.target {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45mm;
+  width: 35mm;
+  border: 2px dashed #ccc;
+  position: relative;
+  cursor: pointer;
+}
+
+.img-container img {
+  display: none;
+}
+
+.img-container.has-image img {
+  display: block;
+}
+
+.img-container.has-image {
+  border: 2px solid #333;
+}
+
+.img-container.highlight {
+  border-color: purple;
+}
+
+.img-container .infotext {
+  text-align: center;
+}
+
+.img-container.has-image .infotext {
+  display: none;
+}
+
+.top-left {
+  flex-grow: 1;
+}
+
+div.top-wrapper {
+  display: flex;
+  width: 100%;
+  gap: 1cm;
+}
+
+.two-column {
+  width: 100%;
+  display: flex;
+}
+
+.two-column .column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+}
+
+input[type="radio"] {
+  box-sizing: border-box;
+  appearance: none;
+  background: white;
+  outline: 2px solid #333;
+  border: 3px solid white;
+  width: 12px;
+  height: 12px;
+  margin-right: 2mm;
+}
+
+input[type="radio"]:checked {
+  background: #333;
+}
+
+label {
+  align-self: flex-end;
+  margin-bottom: 1mm;
+}
+
+input[type="date"] {
+  align-self: flex-end;
+  margin-bottom: 1mm;
+}
+
+input[type="file"]::file-selector-button {
+  display: none;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  display: block;
+  width: 0;
+  height: 0;
+  margin-left: -100%;
+}
+
+input[type="file"]::-ms-browse {
+  display: none;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+@media screen {
+  .container {
+    border: 1px dashed #ccc;
+    background-color: #fff;
+    margin: 12px;
+    padding: 12px;
+  }
+
+  .noprint {
+    margin-left: 12px;
+    h1 {
+      border: none;
+    }
+    p {
+      width: 21cm;
+    }
+  }
+
+  input[type=text], input[type=date], select {
+    background-color: #dce6f1;
+  }
+
+  body {
+    background-color: #eee;
+  }
+}
+
+@media print {
+  .noprint {
+    display: none;
+  }
+
+  input[type="date"]::-webkit-inner-spin-button,
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+  }
+  input[type=date]:required:invalid::-webkit-datetime-edit {
+    color: transparent;
+  }
+
+
+
+  select {
+    /* for Firefox */
+    -moz-appearance: none;
+    /* for Chrome */
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  /* For IE10 */
+  select::-ms-expand {
+    display: none;
+  }
+}

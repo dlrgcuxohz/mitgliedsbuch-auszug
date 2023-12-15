@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Auszug aus dem Mitgliedsbuch als Nachweis der Startberechtigung</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="noprint">
+        <h1>Auszug aus dem Mitgliedsbuch</h1>
+        <p>Hier kann das Formular <strong>Auszug aus dem Mitgliedsbuch</strong> online ausgefüllt und direkt ein Foto eingetragen werden. Die Daten werden vollständig lokal auf deinem Computer verarbeitet und landen nicht auf dem Server.</p>
+
+        <div class="button-row">
+            <button type="button" id="printButton">
+                Drucken
+            </button>
+            <button type="button" id="deleteButton">
+                Alle Daten löschen
+            </button>
+            <button type="button" id="deletePersonalDataButton">
+                Nur Personendaten löschen
+            </button>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>
+            Auszug aus dem Mitgliedsbuch als Nachweis der Startberechtigung für die Gliederung:
+        </h1>
+        <form enctype="multipart/form-data">
+
+            <div class="top-wrapper">
+                <div class="top-left">
+                    <div class="row">
+                        <label>Landesverband:</label>
+                        <select id="lv">
+                            <option></option>
+                            <option>Baden</option>
+                            <option>Bayern</option>
+                            <option>Berlin</option>
+                            <option>Brandenburg</option>
+                            <option>Bremen</option>
+                            <option>Hamburg</option>
+                            <option>Hessen</option>
+                            <option>Mecklenburg-Vorpommern</option>
+                            <option>Niedersachsen</option>
+                            <option>Nordrhein</option>
+                            <option>Rheinland-Pfalz</option>
+                            <option>Saar</option>
+                            <option>Sachsen</option>
+                            <option>Sachsen-Anhalt</option>
+                            <option>Schleswig-Holstein</option>
+                            <option>Thüringen</option>
+                            <option>Westfalen</option>
+                            <option>Württemberg</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <label>Bezirk:</label><input id="bezirk" type="text">
+                    </div>
+                    <div class="row">
+                        <label>Gliederung:</label><input id="gliederung" type="text">
+                    </div>
+                    <div class="row">
+                        <label>im Wettkampfjahr:</label><input id="wettkampfjahr" type="text">
+                    </div>
+                </div>
+                <div class="img-container" id="img-container">
+                    <div class="infotext">
+                        Hier klicken oder Bild reinziehen
+                    </div>
+                    <img id="target" class="target" />
+                </div>
+            </div>
+            <h2>
+                Personalien
+            </h2>
+            <div class="row">
+                <label>Name:</label><input id="name" type="text">
+            </div>
+            <div class="row">
+                <label>Vorname:</label><input id="vorname" type="text">
+            </div>
+            <div class="row short-row">
+                <label>geb. am:</label><input id="geb" type="date" required>
+            </div>
+            <div class="row">
+                <label>Straße:</label><input id="str" type="text">
+            </div>
+            <div class="row">
+                <label>PLZ:</label><input id="plz" class="plz" type="text"><label>Ort:</label><input id="ort"
+                    class="ort" type="text">
+            </div>
+            <div class="row short-row">
+                <label>Eintritt in die Gliederung am:</label><input id="eintritt" type="date" required>
+            </div>
+            <div class="two-column">
+                <div class="column">
+                    <h2>
+                        Nachweis von Prüfungen:
+                    </h2>
+                    <div class="radio-row">
+                        <input type="radio" name="pruefungen" id="p-ss"><label for="p-ss">Schwimmabzeichen
+                            Silber</label>
+                    </div>
+                    <div class="radio-row">
+                        <input type="radio" name="pruefungen" id="p-sg"><label for="p-sg">Schwimmabzeichen Gold</label>
+                    </div>
+                    <div class="radio-row">
+                        <input type="radio" name="pruefungen" id="p-rsb"><label for="p-rsb">Rettungsschwimmabzeichen
+                            Bronze</label>
+                    </div>
+                    <div class="radio-row">
+                        <input type="radio" name="pruefungen" id="p-rss"><label for="p-rss">Rettungsschwimmabzeichen
+                            Silber</label>
+                    </div>
+                    <div class="radio-row">
+                        <input type="radio" name="pruefungen" id="p-rsg"><label for="p-rsg">Rettungsschwimmabzeichen
+                            Gold</label>
+                    </div>
+                    <div class="row ">
+                        <label>Abgelegt am:</label><input id="abgelegt" type="date" required>
+                    </div>
+                    <div class="row">
+                        <label>kombinierte Übung absolviert am:</label><input id="kombi" type="date" required>
+                    </div>
+                </div>
+                <div class="column">
+                    <h2>
+                        Gesundheitszeugnis / Selbsterklärung:
+                    </h2>
+                    <div class="row">
+                        <label>Datum der Untersuchung<br /> bzw. Selbsterklärung:</label><input id="selbsterklaerung"
+                            type="date" required>
+                    </div>
+                    Tauglich:
+                    <div class="radio-row">
+                        <input type="radio" name="tauglichkeit" id="t-ja"><label for="t-ja">Ja</label>
+                    </div>
+                    <div class="radio-row">
+                        <input type="radio" name="tauglichkeit" id="t-ne"><label for=t-ne>Nein</label>
+                    </div>
+                </div>
+            </div>
+            <div class="distance"></div>
+            <div class="row signature-row">
+                <div>
+                    Datum und Unterschrift Berechtigter aus Gliederung
+                </div>
+                <div>
+                    Großes Siegel
+                </div>
+            </div>
+            <div class="distance"></div>
+            <div class="row signature-row">
+                <div>
+                    Datum, Unterschrift Sportler*in
+                </div>
+                <div>
+                    Unterschrift eine*r Erziehungsberechtigen
+                </div>
+            </div>
+
+            <input id="upload" type=file accept="image/*" name="files[]" size=30>
+        </form>
+
+        <div class="logo">
+            <img src="data:image/gif;base64,R0lGODlhUAJgAIABAP8AAAAAACH5BAEAAAEALAAAAABQAmAAQAL/hI+py+0Po1yh2ouz3lzP/3XiSJZmB6bqykbnC8dVS9epzNn6zus42lP9hsRS8IhMIopApfMpxECn1BYzUG1ct9us96slgsdkALaMzjLT3La47G6C3+S4PO21e9Brvv5P4gdoUUc3NohoBJd4Vmh4yBjZiEdZEyf4UqkJEYn5wybJuDkaoudpQpq6JLr4OBeaeOqGVyQLqPrE2joECjtoe7krA2yKa3xs0IcsfELc5hzIfLtMvdlVDRkDfe34if09870cLK42LG23nVluncGu+tfrG/9e6Vvf7Y5vzCU/n74PF7eA7SYRTKUs379Z6Bg2ROUPYB11rrLxorjwnEJ6/xY1dszI8WPIVxXzgCQnsh9GEStP4mh5caM2mC5HHCQ5TabNm1M6PWxGs+YdnhFf/sxBNJeulDCKCvWm0yFTiFElJnVQTFPCqU+bHh2I02NYRFfLgrhidofRqirZ7qRldWLaoBvm2ljLtW1eqnarXOir9BdgFnjHZt0bc/BZRYqDLEXcNVrjuzUnl5JsOUlcw5FnZnYc6zNlfaKd6IXceWhpHlJXqyXkWglYzqmBxkay9fZr3Zpzf6mdmDZaSiVR2+bDu3dxv8AL/35sEqrxWpYPE6f+tXnd7MOnk/aufY/b7uPflg//l7tv5tKFo2cM3nn04O7ff69P/vnynvblm/8LfZ5q8/XHUnKjrcfeOgaGAWB8UtAF3II3WKefghIq4FOASKln34Wr3MMhbB4mkKGD6YWI3ohRzDYgXyqaAV2LYuFHoEEvXkafjJi9WCKN5plYG4THASmkZ4rFqKNXKIZXpIsVzpgkhX2RBdd+/NVYoIbtPWmkjyzeiAyCt/mXYE5ELrklmONgJyGZVCBZZpdAOqlmmGLG5uaVgmn5YJ1n+bnYna7lCQWcb7IJKIOJcvKMh4QGtuecIi76YTiUVtqagY+a1qCXFt4ooKYZOQrlf5F6mp9diIIailNYnshjamMqeempqKa46KixhpqolFG+amOvPYK54aUkZsolsLD/GgvjSICKx+yxX5qqbJ/RJoOSsdZee8BptzLJLaarajtpuNgKWmi10Jqb6rXlmtuslemquy2747obbLjt/vpqk/Vel2aVm6oBr7TyQkqvpZL+eKar+xJcsLilUpuwvzsm++m3E0eMMa0Ld2XxxRR73PFmHGv8L79YhszwyBmr3GhjtvJ5H8oRornxvAMrl/B2NJNs87slA8tylkEX3RnSPv+8bNCy4ixnnFG73LPCTtMJc8tZ96f0ulsXe7V2XXv9Ndhhgww11lJPvXbV+bad7dBqw000O2Sn3XTZVo8zds163021svZOeyjQpHYqN3wfP4UvsoHzuuCwf/s9eXPk//pKt9kjSv743IVX7ackNNXJeeaKn824sDN3vvSuVDItdOU3Rxv336QbqmfArNdYMOG5ey4q4rLHvjuBHKPLqeEXlv657qbzjnfrDgOP8OtH4q6z881XHL3Ww/cNeFrM/54z+eqCT/z2yqtv5mDYZ78zzz2jv/f33Q8J2PvVlw8/vfS/zT78DY9t4rMe7Oo3wKTdz3sBpF7y9EeU1V1tev1aoNGOZkGRnax4Fwze+sxXOw5KL4EC3KAINceb+B0BgvIjIAhNZsLnMRBP/Htg+xLXQRwiL4a42eFnVAgaA+oQhUMEYg8ASDsfZsaIrBHeCSnnL61s8GGzcmH/YChDyGzVComXu5dumPgaIQ7weFyklLeSA0YfODGLWlRdxGLWphrKZo0N/ODt0mdGOEZOji3EXB3tyKq8bdFxX+RjD8X4xBkeDoqhcxYaDblCOr7wYDRsYxxZuERIBlGCf6TiZNwGylCKcpSkLOUQCgAAOw=="
+                alt="" />
+        </div>
+
+    </div>
+
+    <script type="application/javascript" src="script.js"></script>
+</body>
+
+</html>
