@@ -30,6 +30,9 @@ function handleDrop(e) {
 }
 
 function handleFiles(files) {
+  if (files.length == 0) {
+    return;
+  }
   if (files.length != 1) {
     alert("Bitte nur ein Bild auswählen");
     return;
