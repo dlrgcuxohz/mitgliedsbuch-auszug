@@ -82,6 +82,15 @@ div.row {
   gap: 5mm;
 }
 
+.page-2 div.row {
+  height: 6mm;
+}
+
+div.date-og-row {
+  display: grid;
+  grid-template-columns: 3.25cm 1fr;
+}
+
 div.row.short-row {
   width: 10cm;
 }
@@ -166,9 +175,16 @@ div.top-wrapper {
   gap: 1cm;
 }
 
+.top {
+  display: grid;
+  gap: 1mm;
+}
+
 .two-column {
   width: 100%;
-  display: flex;
+  display: grid;
+  gap: 1mm;
+  grid-template-columns: 1fr 1fr;
 }
 
 .two-column .column {

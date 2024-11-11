@@ -64,6 +64,9 @@ function deletePersonalData() {
     "abgelegt",
     "kombi",
     "selbsterklaerung",
+    "name-copy",
+    "vorname-copy",
+    "geb-copy",
   ].forEach((item) => {
     document.getElementById(item).value = "";
   });
@@ -78,7 +81,7 @@ function deletePersonalData() {
 }
 
 function deleteNonPersonalData() {
-  ["lv", "bezirk", "gliederung", "wettkampfjahr"].forEach((item) => {
+  ["lv", "bezirk", "gliederung", "wettkampfjahr", "gliederung-copy"].forEach((item) => {
     document.getElementById(item).value = "";
   });
 }
@@ -124,4 +127,14 @@ function prepareFileUpload() {
   });
 }
 
+function prepareCopyPersonalData() {
+  ["name", "vorname", "geb", "gliederung"].forEach((item) => {
+    const element = document.getElementById(item);
+    element.addEventListener("input", () => {
+      document.getElementById(`${item}-copy`).value = element.value;
+    });
+  });
+}
+
 prepareFileUpload();
+prepareCopyPersonalData();
