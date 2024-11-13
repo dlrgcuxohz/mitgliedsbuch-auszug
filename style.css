@@ -3,6 +3,7 @@
   height: 29.7cm;
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
 }
 
 .button-row {
@@ -60,6 +61,67 @@ button:hover {
 button:focus {
   background-color: #0062cc;
   border-color: #005cbf;
+}
+
+.container-row {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+}
+
+.sidecar {
+  width: 100%;
+  max-width: 600px;
+}
+
+.url-container {
+  width: 100%;
+  position: relative;
+}
+
+.copy-button-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: white;
+  height: 100%;
+  /* width: 20px; */
+}
+
+#copy-button {
+  background: none;
+  width: 14px;
+  height: 16px;
+  min-width: auto;
+  padding: 0;
+  border: none;
+  display: block;
+  margin-top: 3.75px;
+  margin-bottom: 3.75px;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+#copy-button.copied .copy-icon {
+  display: none;
+}
+
+#copy-button .check-icon {
+  display: none;
+}
+
+#copy-button.copied .check-icon {
+  display: inline;
+}
+
+input#url {
+  width: 100%;
+  padding: 6px;
+  background-color: white;
+  user-select: all;
+  cursor: text;
+  border: none;
+  box-sizing: border-box;
 }
 
 div.logo {
