@@ -204,11 +204,15 @@ function parseUrl(str) {
 
   Object.keys(values).forEach(cur => {
     const el = document.getElementById(cur);
+    const elCopy = document.getElementById(`${cur}-copy`);
     if (el) {
       if (el.type === "radio") {
         el.checked = values[cur] === "on";
       } else {
         el.value = values[cur];
+        if (elCopy) {
+          elCopy.value = values[cur];
+        }
       }
       return;
     }
